@@ -1,0 +1,53 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	background-color: hsl(0, 0%, 16%);
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+	gap: 2em;
+	align-items: flex-start;
+	color: #f0f0f0;
+}
+
+#code-editor {
+	color: hsl(0, 0%, 70%);
+	width: calc(100% - 7ch);
+}
+
+.keyword {
+	color: hsl(300, 100%, 50%);
+}
+
+.library {
+	color: hsl(300, 100%, 90%);
+}
+
+.function {
+	color: hsl(60, 80%, 50%);
+}
+
+.number {
+	color: hsl(157, 100%, 40%);
+}
+
+.string {
+	color: hsl(32, 80%, 60%);
+}
+
+.type {
+	color: hsl(120, 100%, 30%);
+}
+
+.variable {
+	color: hsl(0, 0%, 100%);
+}
+
+.unexpected {
+	color: hsl(0, 100%, 50%);
+}

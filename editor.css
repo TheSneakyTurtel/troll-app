@@ -1,0 +1,58 @@
+#code-editor {
+	position: relative;
+	font-family: "Consolas", monospace !important;
+	line-height: 1.5;
+}
+
+#code-editor * {
+	font-family: inherit !important;
+	font-size: inherit !important;
+	line-height: inherit !important;
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+
+	--line-number-width: 7ch;
+	--output-lines-padding: 1ch;
+	--output-lines-border: 2px;
+}
+
+#code-editor .user-input {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: var(--left);
+	width: calc(100% - var(--left));
+	z-index: 100;
+	background-color: transparent;
+	color: transparent;
+	resize: none !important;
+	caret-color: hsla(0, 0%, 100%, 0.5);
+	--left: calc(var(--output-lines-padding) + var(--line-number-width) + var(--output-lines-border));
+}
+
+#code-editor .user-input::selection {
+	border-radius: 4px;
+	background-color: hsla(0, 0%, 100%, 0.15);
+	color: transparent;
+}
+
+#code-editor .output-container {
+	padding-left: var(--line-number-width);
+}
+
+#code-editor .output-lines {
+	border: var(--output-lines-border) solid hsla(0, 0%, 100%, 0.15);
+}
+
+#code-editor .output-lines > * {
+	background-color: hsla(0, 0%, 100%, 0.025);
+	padding-left: var(--output-lines-padding);
+}
+
+#code-editor .cursor {
+	position: absolute;
+	width: 1px;
+	background-color: white;
+}

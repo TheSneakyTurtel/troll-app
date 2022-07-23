@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"module": "ES2020",
+		"target": "es6",
+		"noImplicitAny": true,
+		"sourceMap": true,
+		"outDir": "../../dist/page",
+		"baseUrl": ".",
+		"moduleResolution": "node",
+		"paths": {
+			"*": ["node_modules/*"]
+		}
+	},
+
+	"include": ["."]
+}
